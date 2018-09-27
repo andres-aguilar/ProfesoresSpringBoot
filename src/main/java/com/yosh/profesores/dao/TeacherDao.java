@@ -13,10 +13,10 @@ public class TeacherDao extends AbstractSession implements ITeacher {
 		getSession().persist(teacher);
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Teacher> findAll() {
-		getSession().createQuery("from Teacher").list();
-		return null;		
+		return (List<Teacher>)getSession().createQuery("from Teacher").list();
 	}
 
 	@Override
