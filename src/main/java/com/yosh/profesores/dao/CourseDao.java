@@ -39,7 +39,7 @@ public class CourseDao extends AbstractSession implements ICourse{
 	@Override
 	public Course findByName(String name) {
 		return (Course)getSession().createQuery("from Course where name = :name")
-				.setParameter(":name", name)
+				.setParameter("name", name)
 				.uniqueResult();
 	}
 

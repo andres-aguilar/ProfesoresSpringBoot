@@ -25,7 +25,7 @@ public class SocialMediaDao extends AbstractSession implements ISocialMedia {
 	@Override
 	public SocialMedia findByName(String name) {
 		return (SocialMedia)getSession().createQuery("FROM SocialMedia WHERE name = :name")
-				.setParameter(":name", name)
+				.setParameter("name", name)
 				.uniqueResult();
 	}
 
