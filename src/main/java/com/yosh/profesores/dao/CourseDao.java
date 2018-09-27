@@ -43,4 +43,12 @@ public class CourseDao extends AbstractSession implements ICourse{
 				.uniqueResult();
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Course> findByIdTeacher(Long idTeacher) {
+		return (List<Course>)getSession().createQuery("FROM Course c JOIN Course.teacher t WHERE t.idTeacher = :idTeacher")
+				.setParameter("idTeacher", idTeacher)
+				.list();
+	}
+
 }

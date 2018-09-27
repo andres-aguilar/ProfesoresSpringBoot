@@ -18,4 +18,6 @@ public interface ICourse {
 	
 	void update(Course course);
 	
+	List<Course> findByIdTeacher(Long idTeacher);
+	
 }
