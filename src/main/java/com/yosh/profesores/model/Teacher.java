@@ -1,4 +1,4 @@
-package com.yosh.profesores.models;
+package com.yosh.profesores.model;
 
 import java.io.Serializable;
 import java.util.Set;

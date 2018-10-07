@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.yosh.profesores.dao.ITeacher;
-import com.yosh.profesores.models.Teacher;
+import com.yosh.profesores.model.Teacher;
 
 @Service("teacherService")
 @Transactional

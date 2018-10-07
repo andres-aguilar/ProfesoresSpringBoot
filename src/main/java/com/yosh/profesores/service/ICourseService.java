@@ -2,7 +2,7 @@ package com.yosh.profesores.service;
 
 import java.util.List;
 
-import com.yosh.profesores.models.Course;
+import com.yosh.profesores.model.Course;
 
 public interface ICourseService {
 

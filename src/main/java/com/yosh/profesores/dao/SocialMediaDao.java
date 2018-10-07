@@ -6,8 +6,8 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
-import com.yosh.profesores.models.SocialMedia;
-import com.yosh.profesores.models.TeacherSocialMedia;
+import com.yosh.profesores.model.SocialMedia;
+import com.yosh.profesores.model.TeacherSocialMedia;
 
 @Repository
 @Transactional

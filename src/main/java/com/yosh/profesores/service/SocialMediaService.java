@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.yosh.profesores.dao.ISocialMedia;
-import com.yosh.profesores.models.SocialMedia;
-import com.yosh.profesores.models.TeacherSocialMedia;
+import com.yosh.profesores.model.SocialMedia;
+import com.yosh.profesores.model.TeacherSocialMedia;
 
 @Service("socialMediaService")
 @Transactional

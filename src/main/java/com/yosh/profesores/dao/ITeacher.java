@@ -2,7 +2,7 @@ package com.yosh.profesores.dao;
 
 import java.util.List;
 
-import com.yosh.profesores.models.Teacher;
+import com.yosh.profesores.model.Teacher;
 
 public interface ITeacher {
 	

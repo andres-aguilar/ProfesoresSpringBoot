@@ -2,8 +2,8 @@ package com.yosh.profesores.dao;
 
 import java.util.List;
 
-import com.yosh.profesores.models.SocialMedia;
-import com.yosh.profesores.models.TeacherSocialMedia;
+import com.yosh.profesores.model.SocialMedia;
+import com.yosh.profesores.model.TeacherSocialMedia;
 
 public interface ISocialMedia {
 

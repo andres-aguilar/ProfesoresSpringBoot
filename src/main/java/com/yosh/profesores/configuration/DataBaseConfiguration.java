@@ -21,7 +21,7 @@ public class DataBaseConfiguration {
 		LocalSessionFactoryBean sessionFactoryBean = new LocalSessionFactoryBean();
 		
 		sessionFactoryBean.setDataSource(dataSource());
-		sessionFactoryBean.setPackagesToScan("com.yosh.profesores.models");
+		sessionFactoryBean.setPackagesToScan("com.yosh.profesores.model");
 		sessionFactoryBean.setHibernateProperties(hibernateProperties());
 		
 		return sessionFactoryBean;

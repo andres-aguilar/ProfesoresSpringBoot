@@ -6,7 +6,7 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
-import com.yosh.profesores.models.Teacher;
+import com.yosh.profesores.model.Teacher;
 
 @Repository
 @Transactional
