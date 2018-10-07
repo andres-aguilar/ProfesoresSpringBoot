@@ -2,8 +2,14 @@ package com.yosh.profesores.dao;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Repository;
+
 import com.yosh.profesores.models.Course;
 
+@Repository
+@Transactional
 public class CourseDao extends AbstractSession implements ICourse{
 	
 	public CourseDao() {}

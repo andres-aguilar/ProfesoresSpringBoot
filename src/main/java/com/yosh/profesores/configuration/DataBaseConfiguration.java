@@ -32,7 +32,7 @@ public class DataBaseConfiguration {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://localhost:3306/escuela?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/escuela");  // ?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC
 		dataSource.setUsername("test");
 		//  dataSource.setPassword("");
 		

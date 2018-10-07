@@ -2,8 +2,15 @@ package com.yosh.profesores.dao;
 
 import java.util.List;
 
-import com.yosh.profesores.models.SocialMedia;
+import javax.transaction.Transactional;
 
+import org.springframework.stereotype.Repository;
+
+import com.yosh.profesores.models.SocialMedia;
+import com.yosh.profesores.models.TeacherSocialMedia;
+
+@Repository
+@Transactional
 public class SocialMediaDao extends AbstractSession implements ISocialMedia {
 
 	@Override
@@ -39,6 +46,12 @@ public class SocialMediaDao extends AbstractSession implements ISocialMedia {
 	@Override
 	public void update(SocialMedia socialMedia) {
 		getSession().update(socialMedia);
+	}
+
+	@Override
+	public TeacherSocialMedia findSocialMediaByIdAndName(Long idSocialMedia, String Name) {
+		// TODO Completar este método
+		return null;
 	}
 
 }
