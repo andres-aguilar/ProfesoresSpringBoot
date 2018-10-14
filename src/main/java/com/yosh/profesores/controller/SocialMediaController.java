@@ -16,6 +16,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import com.yosh.profesores.model.SocialMedia;
 import com.yosh.profesores.service.ISocialMediaService;
+import com.yosh.profesores.util.CustomErrorType;
 
 @Controller
 @RequestMapping("/v1")
@@ -53,7 +54,7 @@ public class SocialMediaController {
 	@RequestMapping(value="/socialMedias/{id}", method=RequestMethod.GET, headers="Accept=application/json")
 	public ResponseEntity<SocialMedia> getSocialMediaById(@PathVariable("id") Long id) {
 		if(id == null || id < 0) {
-			return new ResponseEntity(HttpStatus.NO_CONTENT);
+			return new ResponseEntity(new CustomErrorType("idSocialMedia is requiered"), HttpStatus.CONFLICT);
 		}
 		
 		SocialMedia socialMedia = _socialMediaService.findById(id);
@@ -74,7 +75,7 @@ public class SocialMediaController {
 	@RequestMapping(value="/socialMedias", method=RequestMethod.POST, headers="Accept=application/json")
 	public ResponseEntity<?> createSocialMedia(@RequestBody SocialMedia socialMedia, UriComponentsBuilder uriComponentBuilder) {
 		if (socialMedia.getName().equals(null) || socialMedia.getName().isEmpty()) {
-			return new ResponseEntity(HttpStatus.NO_CONTENT);
+			return new ResponseEntity(new CustomErrorType("SocialMedia name is requiered"), HttpStatus.CONFLICT);
 		}
 		if (_socialMediaService.findByName(socialMedia.getName()) != null) {
 			return new ResponseEntity(HttpStatus.NO_CONTENT);
@@ -101,7 +102,7 @@ public class SocialMediaController {
 	@RequestMapping(value="/socialMedias/{id}", method=RequestMethod.PATCH, headers="Accept=appliucation/json")
 	public ResponseEntity<?> updateSocialMedia(@PathVariable("id") Long id, @RequestBody SocialMedia socialMedia) {
 		if(id == null || id < 0) {
-			return new ResponseEntity(HttpStatus.NO_CONTENT);
+			return new ResponseEntity(new CustomErrorType("idSocialMedia is requiered"), HttpStatus.CONFLICT);
 		}
 		
 		SocialMedia currentSocialMedia = _socialMediaService.findById(id);
@@ -129,7 +130,7 @@ public class SocialMediaController {
 	@RequestMapping(value="/socialMedias/{id}", method=RequestMethod.DELETE)
 	public ResponseEntity<?> deleteSocialMedia(@PathVariable("id") Long id) {
 		if(id == null || id < 0) {
-			return new ResponseEntity(HttpStatus.NO_CONTENT);
+			return new ResponseEntity(new CustomErrorType("idSocialMedia is requiered"), HttpStatus.CONFLICT);
 		}
 		
 		SocialMedia socialMedia = _socialMediaService.findById(id);
